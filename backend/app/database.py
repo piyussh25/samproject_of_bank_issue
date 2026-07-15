@@ -1,38 +1,30 @@
-import os
-import json
 import uuid
 from datetime import datetime
-import pymongo
-from pymongo.errors import ConnectionFailure
 from app.config import settings
 
-class JSONCollection:
-    """Mock MongoDB collection using local JSON files"""
-    def __init__(self, filepath):
-        self.filepath = filepath
-        self._ensure_file()
+# Global In-Memory Database
+_IN_MEMORY_DB = {
+    "sessions": [],
+    "alerts": [],
+    "users": [],
+    "threat_intel": []
+}
 
-    def _ensure_file(self):
-        os.makedirs(os.path.dirname(self.filepath), exist_ok=True)
-        if not os.path.exists(self.filepath):
-            with open(self.filepath, 'w') as f:
-                json.dump([], f)
+class InMemoryCollection:
+    """Mock MongoDB collection that stores data completely in-memory"""
+    def __init__(self, name, db_dict):
+        self.name = name
+        self.db_dict = db_dict
 
-    def _read_data(self):
-        self._ensure_file()
-        try:
-            with open(self.filepath, 'r') as f:
-                return json.load(f)
-        except Exception:
-            return []
+    @property
+    def data(self):
+        return self.db_dict[self.name]
 
-    def _write_data(self, data):
-        self._ensure_file()
-        with open(self.filepath, 'w') as f:
-            json.dump(data, f, default=str, indent=2)
+    @data.setter
+    def data(self, value):
+        self.db_dict[self.name] = value
 
     def insert_one(self, document):
-        data = self._read_data()
         doc = document.copy()
         if '_id' not in doc:
             doc['_id'] = str(uuid.uuid4())
@@ -40,12 +32,10 @@ class JSONCollection:
         for k, v in doc.items():
             if isinstance(v, datetime):
                 doc[k] = v.isoformat()
-        data.append(doc)
-        self._write_data(data)
+        self.data.append(doc)
         return type('InsertResult', (), {'inserted_id': doc['_id']})()
 
     def insert_many(self, documents):
-        data = self._read_data()
         inserted_ids = []
         for document in documents:
             doc = document.copy()
@@ -54,17 +44,15 @@ class JSONCollection:
             for k, v in doc.items():
                 if isinstance(v, datetime):
                     doc[k] = v.isoformat()
-            data.append(doc)
+            self.data.append(doc)
             inserted_ids.append(doc['_id'])
-        self._write_data(data)
         return type('InsertManyResult', (), {'inserted_ids': inserted_ids})()
 
     def find(self, query=None, limit=0, sort=None):
         query = query or {}
-        data = self._read_data()
         results = []
         
-        for doc in data:
+        for doc in self.data:
             match = True
             for k, v in query.items():
                 # Handle simple equality matches and nested queries
@@ -109,13 +97,10 @@ class JSONCollection:
         return results[0] if results else None
 
     def update_one(self, query, update):
-        data = self._read_data()
         updated_count = 0
-        
-        # Parse $set operators
         set_fields = update.get('$set', {})
         
-        for doc in data:
+        for doc in self.data:
             match = True
             for k, v in query.items():
                 if doc.get(k) != v:
@@ -131,9 +116,6 @@ class JSONCollection:
                 updated_count += 1
                 break  # update_one updates only the first matching document
                 
-        if updated_count > 0:
-            self._write_data(data)
-            
         return type('UpdateResult', (), {'modified_count': updated_count})()
 
     def count_documents(self, query=None):
@@ -142,11 +124,10 @@ class JSONCollection:
 
     def delete_many(self, query=None):
         query = query or {}
-        data = self._read_data()
-        original_len = len(data)
+        original_len = len(self.data)
         
         new_data = []
-        for doc in data:
+        for doc in self.data:
             match = True
             for k, v in query.items():
                 if doc.get(k) != v:
@@ -156,47 +137,18 @@ class JSONCollection:
                 new_data.append(doc)
                 
         deleted_count = original_len - len(new_data)
-        if deleted_count > 0:
-            self._write_data(new_data)
-            
+        self.data = new_data
         return type('DeleteResult', (), {'deleted_count': deleted_count})()
-
-
-class JSONDatabase:
-    """Mock MongoDB database routing to JSONCollection classes"""
-    def __init__(self, directory):
-        self.directory = directory
-        
-    def __getitem__(self, name):
-        filepath = os.path.join(self.directory, f"{name}.json")
-        return JSONCollection(filepath)
 
 
 class DatabaseManager:
     def __init__(self):
-        self.client = None
-        self.db = None
-        self.use_fallback = False
-        
-        # Try connecting to MongoDB
-        try:
-            print(f"Connecting to MongoDB at: {settings.MONGO_URI}...")
-            # Set short timeout (3 seconds) so it doesn't hang startup
-            self.client = pymongo.MongoClient(settings.MONGO_URI, serverSelectionTimeoutMS=3000)
-            # Trigger connection check
-            self.client.admin.command('ping')
-            self.db = self.client[settings.DB_NAME]
-            print(f"Successfully connected to MongoDB database '{settings.DB_NAME}'.")
-        except (ConnectionFailure, Exception) as e:
-            print(f"MongoDB connection failed: {e}")
-            print(f"Initializing JSON Fallback Database at: {settings.FALLBACK_DB_DIR}")
-            self.use_fallback = True
-            self.db = JSONDatabase(settings.FALLBACK_DB_DIR)
+        print("Using completely database-free In-Memory Database.")
+        self.db = _IN_MEMORY_DB
 
     def get_collection(self, name):
-        if self.use_fallback:
-            return self.db[name]
-        return self.db[name]
+        return InMemoryCollection(name, self.db)
+
 
 # Global DB Instance
 db_manager = DatabaseManager()

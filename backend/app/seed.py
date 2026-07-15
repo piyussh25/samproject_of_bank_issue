@@ -37,7 +37,7 @@ def seed_database():
     print(f"Scraped threat intelligence cached (Malicious IPs: {len(intel['malicious_ips'])}).")
     
     # 3. Read Synthetic CSV
-    csv_path = "c:\\Users\\Piyush\\OneDrive\\Web development\\sam ka project\\backend\\ml\\data\\synthetic_banking_activities.csv"
+    csv_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "ml", "data", "synthetic_banking_activities.csv")
     if not os.path.exists(csv_path):
         print(f"Synthetic dataset not found at {csv_path}. Please run generate_dataset.py and train_models.py first.")
         return

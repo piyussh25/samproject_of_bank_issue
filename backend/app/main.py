@@ -40,6 +40,17 @@ def fetch_cached_threat_intel():
 
 @app.on_event("startup")
 def startup_event():
+    # Auto-seed in-memory database if empty
+    from app.database import get_users_collection
+    from app.seed import seed_database
+    user_col = get_users_collection()
+    if user_col.count_documents() == 0:
+        print("In-memory database is empty. Running auto-seeding...")
+        try:
+            seed_database()
+        except Exception as e:
+            print(f"Failed to auto-seed database: {e}")
+
     # Pre-fetch threat intel on startup
     try:
         fetch_cached_threat_intel()
