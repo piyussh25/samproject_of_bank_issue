@@ -1,0 +1,922 @@
+[
+  {
+    "_id": "fd3a5454-f4ca-450c-85a2-61f22b83b6a4",
+    "session_id": "7f9ed1c7-f71e-4bb8-9a24-fc83d9a09e72",
+    "user_id": "EMP1014",
+    "employee_name": "Linda Hernandez",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.77.117)",
+      "Login from High-risk Country (UA)",
+      "Excessive data download volume (127 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.007,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.023,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-09 07:40:53"
+  },
+  {
+    "_id": "3e2d7e71-c597-46df-b405-d8c08bc9b9a9",
+    "session_id": "2360c58d-d560-411d-8df2-163def20c5e6",
+    "user_id": "EMP1029",
+    "employee_name": "Elizabeth Davis",
+    "employee_role": "System Admin",
+    "privilege_level": 4,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.96.234)",
+      "Excessive data download volume (126 files)",
+      "High number of administrator commands executed (24)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.008,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.38,
+      "sensitive_files_accessed": 0.026,
+      "admin_commands_executed": 0.184
+    },
+    "action_taken": "Block",
+    "status": "INVESTIGATING",
+    "notes": null,
+    "timestamp": "2026-07-13 18:31:53"
+  },
+  {
+    "_id": "536b5467-bacb-4c24-a86f-5aacc4b09a4f",
+    "session_id": "2fb3eeae-406d-4bf7-871a-3263a29237d4",
+    "user_id": "EMP1003",
+    "employee_name": "Michael Moore",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (100.23.75.120)",
+      "Login from High-risk Country (UA)",
+      "Excessive data download volume (132 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.004,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.033,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "RESOLVED",
+    "notes": "Investigated and verified login credentials with employee",
+    "timestamp": "2026-07-10 03:25:53"
+  },
+  {
+    "_id": "ad3081a3-2da1-4dc0-8a97-efe44c0a831d",
+    "session_id": "c4aa99c5-9d32-4377-86de-1fd69ef71044",
+    "user_id": "EMP1037",
+    "employee_name": "Mary Hernandez",
+    "employee_role": "System Admin",
+    "privilege_level": 4,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.201.226.38)",
+      "High number of administrator commands executed (42)",
+      "Excessive data download volume (40 files)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.005,
+      "files_downloaded": 0.256,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.38,
+      "sensitive_files_accessed": 0.015,
+      "admin_commands_executed": 0.322
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-12 17:14:53"
+  },
+  {
+    "_id": "f6e8edcb-5ce2-4363-95e8-a3861a9a61a8",
+    "session_id": "03c83ab7-72e8-44ce-9d71-7525db20f420",
+    "user_id": "EMP1034",
+    "employee_name": "Joseph Taylor",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.47.15.119)",
+      "Multiple failed password entries prior to login (3)",
+      "Excessive data download volume (40 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": -0.001,
+      "files_downloaded": 0.256,
+      "failed_login_attempts": 0.633,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.012,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-12 19:56:53"
+  },
+  {
+    "_id": "c991a1ae-c5ce-4e81-b263-184d1627fd18",
+    "session_id": "5ee51529-b95f-427d-9113-9904aa39e9aa",
+    "user_id": "EMP1016",
+    "employee_name": "Charles Hernandez",
+    "employee_role": "Manager",
+    "privilege_level": 3,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.47.15.119)",
+      "Login from High-risk Country (RU)",
+      "Multiple failed password entries prior to login (5)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.0,
+      "files_downloaded": 0.146,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": 0.228,
+      "sensitive_files_accessed": 0.012,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "INVESTIGATING",
+    "notes": null,
+    "timestamp": "2026-07-08 19:29:53"
+  },
+  {
+    "_id": "7e53e72a-7a82-4dbc-abb0-45f7b8d23c65",
+    "session_id": "9583c759-a770-4462-817d-8663cd8c0eaa",
+    "user_id": "EMP1029",
+    "employee_name": "Elizabeth Davis",
+    "employee_role": "System Admin",
+    "privilege_level": 4,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.201.226.38)",
+      "Login from High-risk Country (IR)",
+      "Multiple failed password entries prior to login (3)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.007,
+      "files_downloaded": 0.175,
+      "failed_login_attempts": 0.633,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": 0.38,
+      "sensitive_files_accessed": 0.01,
+      "admin_commands_executed": 0.061
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-12 06:33:53"
+  },
+  {
+    "_id": "016c57e4-a223-4094-8348-2b6991cdf895",
+    "session_id": "46675486-b18d-4cee-a4cc-fde85b937b17",
+    "user_id": "EMP1009",
+    "employee_name": "John Johnson",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.201.226.38)",
+      "Login from High-risk Country (RU)",
+      "Multiple failed password entries prior to login (4)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.007,
+      "files_downloaded": 0.146,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.009,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-12 12:43:53"
+  },
+  {
+    "_id": "86848aae-2bfd-4248-ac74-6fbd8686825b",
+    "session_id": "5ba2934c-7ae7-44d9-b819-9d4091a1884e",
+    "user_id": "EMP1034",
+    "employee_name": "Joseph Taylor",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.96.234)",
+      "Excessive data download volume (107 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.007,
+      "files_downloaded": 0.746,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.031,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-10 17:11:53"
+  },
+  {
+    "_id": "815827fd-3e9b-462f-b90e-fe500d31da4e",
+    "session_id": "badbce71-58a4-4068-a863-fe53f16b342e",
+    "user_id": "EMP1008",
+    "employee_name": "Elizabeth Martin",
+    "employee_role": "Vendor",
+    "privilege_level": 2,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.77.117)",
+      "Login from High-risk Country (KP)",
+      "Excessive data download volume (116 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.008,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.076,
+      "sensitive_files_accessed": 0.026,
+      "admin_commands_executed": 0.008
+    },
+    "action_taken": "Block",
+    "status": "RESOLVED",
+    "notes": "Investigated and verified login credentials with employee",
+    "timestamp": "2026-07-13 09:40:53"
+  },
+  {
+    "_id": "acffdaca-af6a-47b5-84ea-af7f3152e540",
+    "session_id": "5a3ab6ed-2b1b-42f7-9a5d-52673dd83a9f",
+    "user_id": "EMP1017",
+    "employee_name": "Joseph Jones",
+    "employee_role": "Manager",
+    "privilege_level": 3,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (100.23.75.120)",
+      "Excessive data download volume (131 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.007,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.228,
+      "sensitive_files_accessed": 0.027,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-13 21:39:53"
+  },
+  {
+    "_id": "b67a6e1d-9d55-44bd-ae5a-6b779cd7fdff",
+    "session_id": "5dc1ef07-e09b-4527-a83b-fc25ae57c68b",
+    "user_id": "EMP1007",
+    "employee_name": "Sarah Brown",
+    "employee_role": "Vendor",
+    "privilege_level": 2,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.77.117)",
+      "Login from High-risk Country (KP)",
+      "Excessive data download volume (80 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.007,
+      "files_downloaded": 0.548,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.076,
+      "sensitive_files_accessed": 0.028,
+      "admin_commands_executed": 0.015
+    },
+    "action_taken": "Block",
+    "status": "INVESTIGATING",
+    "notes": null,
+    "timestamp": "2026-07-09 04:55:53"
+  },
+  {
+    "_id": "db2d380d-1be4-4e1b-83d0-86e38bd1ae8a",
+    "session_id": "983a7141-6ba1-4dc5-94c2-48261ba022f2",
+    "user_id": "EMP1005",
+    "employee_name": "Michael Hernandez",
+    "employee_role": "DBA",
+    "privilege_level": 4,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (100.23.75.120)",
+      "Login from High-risk Country (IR)",
+      "Multiple failed password entries prior to login (5)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.0,
+      "files_downloaded": 0.183,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": 0.38,
+      "sensitive_files_accessed": 0.017,
+      "admin_commands_executed": 0.115
+    },
+    "action_taken": "Block",
+    "status": "RESOLVED",
+    "notes": "Investigated and verified login credentials with employee",
+    "timestamp": "2026-07-14 11:05:53"
+  },
+  {
+    "_id": "02725138-18b1-441e-ab14-515cdf7e1771",
+    "session_id": "49c4220d-e631-4fb3-84dc-f3c5f5f44dd6",
+    "user_id": "EMP1028",
+    "employee_name": "David Thomas",
+    "employee_role": "System Admin",
+    "privilege_level": 4,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (100.23.75.120)",
+      "Excessive data download volume (118 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.005,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.38,
+      "sensitive_files_accessed": 0.035,
+      "admin_commands_executed": 0.153
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-09 16:20:53"
+  },
+  {
+    "_id": "54e9a097-7dd0-4bb0-a93e-fa17fc2ec1a6",
+    "session_id": "ae86fd65-ae6b-4d63-80f5-de62108311a7",
+    "user_id": "EMP1022",
+    "employee_name": "Joseph Taylor",
+    "employee_role": "Manager",
+    "privilege_level": 3,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.47.15.119)",
+      "Login from High-risk Country (RU)",
+      "Excessive data download volume (80 files)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.004,
+      "files_downloaded": 0.548,
+      "failed_login_attempts": 0.211,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.228,
+      "sensitive_files_accessed": 0.031,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-10 00:49:53"
+  },
+  {
+    "_id": "35f882b2-34eb-4dfd-a850-72ba797ace47",
+    "session_id": "7e533fd9-4be0-4795-94b7-fa93280304d5",
+    "user_id": "EMP1007",
+    "employee_name": "Sarah Brown",
+    "employee_role": "Vendor",
+    "privilege_level": 2,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.77.117)",
+      "Multiple failed password entries prior to login (4)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": -0.004,
+      "files_downloaded": 0.139,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": 0.076,
+      "sensitive_files_accessed": 0.015,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "RESOLVED",
+    "notes": "Investigated and verified login credentials with employee",
+    "timestamp": "2026-07-09 02:07:53"
+  },
+  {
+    "_id": "06e1d847-347e-4731-bb06-cff3914ab095",
+    "session_id": "30de55bf-c9a4-4ef8-a2e1-7fa9ff2c245b",
+    "user_id": "EMP1000",
+    "employee_name": "Patricia Smith",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.47.15.119)",
+      "Login from High-risk Country (KP)",
+      "Excessive data download volume (145 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.005,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.211,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.031,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "RESOLVED",
+    "notes": "Investigated and verified login credentials with employee",
+    "timestamp": "2026-07-12 01:16:53"
+  },
+  {
+    "_id": "a9814896-749c-4443-abf2-e9c7e453ee4b",
+    "session_id": "a3bc1054-dd15-4aa6-b0d9-e22599127377",
+    "user_id": "EMP1025",
+    "employee_name": "William Taylor",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.77.117)",
+      "Login from High-risk Country (KP)",
+      "Multiple failed password entries prior to login (5)",
+      "Excessive data download volume (32 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.0,
+      "files_downloaded": 0.197,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.013,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "RESOLVED",
+    "notes": "Investigated and verified login credentials with employee",
+    "timestamp": "2026-07-09 21:36:53"
+  },
+  {
+    "_id": "fb9c069b-78e1-4134-9461-dc14b0125c8e",
+    "session_id": "b2c8e98b-1e7c-44d6-b0df-a85556cd5cad",
+    "user_id": "EMP1039",
+    "employee_name": "Linda Thomas",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.77.117)",
+      "Login from High-risk Country (KP)",
+      "Multiple failed password entries prior to login (5)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.008,
+      "files_downloaded": 0.153,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.015,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "INVESTIGATING",
+    "notes": null,
+    "timestamp": "2026-07-09 08:08:54"
+  },
+  {
+    "_id": "873a3997-6ae1-4b1d-a83c-b48ad93a9dc2",
+    "session_id": "17be8363-41c6-4079-8d05-d955593bf9e3",
+    "user_id": "EMP1002",
+    "employee_name": "John Miller",
+    "employee_role": "Manager",
+    "privilege_level": 3,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.96.234)",
+      "Login from High-risk Country (IR)",
+      "Multiple failed password entries prior to login (4)",
+      "Excessive data download volume (34 files)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": -0.003,
+      "files_downloaded": 0.212,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": 0.228,
+      "sensitive_files_accessed": 0.012,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-14 00:32:54"
+  },
+  {
+    "_id": "d6f1fc8c-25fd-4fd1-8183-209baf057e85",
+    "session_id": "5d8c367e-dd54-4dca-8071-d2aeb3ae9b97",
+    "user_id": "EMP1000",
+    "employee_name": "Patricia Smith",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.96.234)",
+      "Excessive data download volume (135 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.008,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.025,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-09 04:29:54"
+  },
+  {
+    "_id": "2db79e54-0f62-4e5e-8f63-9e749ee95e6a",
+    "session_id": "2148894a-f718-4eca-8c50-f134bc775f2a",
+    "user_id": "EMP1038",
+    "employee_name": "Jessica Miller",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.77.117)",
+      "Login from High-risk Country (IR)",
+      "Multiple failed password entries prior to login (5)",
+      "Excessive data download volume (31 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.002,
+      "files_downloaded": 0.19,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.009,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-09 18:06:54"
+  },
+  {
+    "_id": "cb1ce31f-e95f-4420-955a-69ef956dd217",
+    "session_id": "d55134e6-2b0f-441f-a3cc-aa65ac952ed6",
+    "user_id": "EMP1034",
+    "employee_name": "Joseph Taylor",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.47.15.119)",
+      "Login from High-risk Country (KP)",
+      "Multiple failed password entries prior to login (5)",
+      "Excessive data download volume (35 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.005,
+      "files_downloaded": 0.219,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.011,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-14 01:25:54"
+  },
+  {
+    "_id": "fce10a13-c309-4161-9c11-ded32d6de90b",
+    "session_id": "ba33920b-a67a-4027-bf1e-c3a182ef4c05",
+    "user_id": "EMP1001",
+    "employee_name": "Patricia Moore",
+    "employee_role": "System Admin",
+    "privilege_level": 4,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.47.15.119)",
+      "High number of administrator commands executed (71)",
+      "Excessive data download volume (53 files)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.008,
+      "files_downloaded": 0.351,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.38,
+      "sensitive_files_accessed": 0.012,
+      "admin_commands_executed": 0.544
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-10 06:49:54"
+  },
+  {
+    "_id": "f06cd550-f8da-45b5-a294-3d6d389bb517",
+    "session_id": "22b5ddda-b589-43b2-b1ed-7d70142c90d3",
+    "user_id": "EMP1011",
+    "employee_name": "Jennifer Lopez",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.201.226.38)",
+      "Excessive data download volume (84 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.005,
+      "files_downloaded": 0.577,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.03,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "RESOLVED",
+    "notes": "Investigated and verified login credentials with employee",
+    "timestamp": "2026-07-10 22:17:54"
+  },
+  {
+    "_id": "24dd4f0a-8437-4afa-83bf-56a98ceb423a",
+    "session_id": "413d61de-e87a-496b-9046-be9cba9aa531",
+    "user_id": "EMP1028",
+    "employee_name": "David Thomas",
+    "employee_role": "System Admin",
+    "privilege_level": 4,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.77.117)",
+      "Excessive data download volume (125 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.003,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.38,
+      "sensitive_files_accessed": 0.039,
+      "admin_commands_executed": 0.169
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-12 17:02:54"
+  },
+  {
+    "_id": "e0344d32-a880-4129-973e-9f12a4b13779",
+    "session_id": "3ed921aa-b934-4e80-ad42-11c1ba6e137d",
+    "user_id": "EMP1026",
+    "employee_name": "Elizabeth Taylor",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.201.226.38)",
+      "Login from High-risk Country (RU)",
+      "Multiple failed password entries prior to login (3)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.004,
+      "files_downloaded": 0.139,
+      "failed_login_attempts": 0.633,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.016,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-10 17:09:54"
+  },
+  {
+    "_id": "9ce56b43-3b5f-4a75-ae9a-7fe9c238b413",
+    "session_id": "34e9ce43-d742-41d3-b418-997632742f9c",
+    "user_id": "EMP1028",
+    "employee_name": "David Thomas",
+    "employee_role": "System Admin",
+    "privilege_level": 4,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.200.96.234)",
+      "Login from High-risk Country (UA)",
+      "Excessive data download volume (140 files)",
+      "High number of administrator commands executed (25)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.005,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": 0.38,
+      "sensitive_files_accessed": 0.035,
+      "admin_commands_executed": 0.192
+    },
+    "action_taken": "Block",
+    "status": "INVESTIGATING",
+    "notes": null,
+    "timestamp": "2026-07-09 04:21:54"
+  },
+  {
+    "_id": "9f4e6ffa-6ade-4457-a5dd-f410d85bd70a",
+    "session_id": "9f633d70-98df-4137-aff2-32478a5979b4",
+    "user_id": "EMP1015",
+    "employee_name": "Mary Hernandez",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.201.226.38)",
+      "Login from High-risk Country (RU)",
+      "Excessive data download volume (116 files)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": 0.006,
+      "files_downloaded": 0.8,
+      "failed_login_attempts": 0.0,
+      "device_changed": 0.0,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.032,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-11 08:59:54"
+  },
+  {
+    "_id": "b66011f6-0318-4830-9023-28ed6b0e6397",
+    "session_id": "c3ef4063-0aa7-47e5-8806-924eaa59145a",
+    "user_id": "EMP1014",
+    "employee_name": "Linda Hernandez",
+    "employee_role": "Teller",
+    "privilege_level": 1,
+    "risk_level": "Critical",
+    "anomaly_score": 1.0,
+    "reasons": [
+      "Login from Scraped Blacklisted IP (101.201.226.38)",
+      "Login from High-risk Country (IR)",
+      "Multiple failed password entries prior to login (4)",
+      "High baseline behavioral anomaly index (1.0)"
+    ],
+    "attributions": {
+      "anomaly_score": 0.17,
+      "login_hour": -0.004,
+      "files_downloaded": 0.139,
+      "failed_login_attempts": 0.8,
+      "device_changed": 0.009,
+      "location_changed": 0.113,
+      "privilege_level": -0.076,
+      "sensitive_files_accessed": 0.01,
+      "admin_commands_executed": 0.0
+    },
+    "action_taken": "Block",
+    "status": "OPEN",
+    "notes": null,
+    "timestamp": "2026-07-11 07:44:54"
+  }
+]
