@@ -22,7 +22,7 @@ export default function UserDetails({ userId, sessionId, setCurrentPage }) {
   const [overrideNotes, setOverrideNotes] = useState('');
   const [overrideSuccess, setOverrideSuccess] = useState('');
 
-  const API_URL = 'http://localhost:8000/api';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
   useEffect(() => {
     const fetchUserData = async () => {

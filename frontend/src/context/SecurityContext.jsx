@@ -25,7 +25,7 @@ export const SecurityProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   
-  const API_URL = 'http://localhost:8000/api';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
   // Login handler
   const login = async (username, password) => {
